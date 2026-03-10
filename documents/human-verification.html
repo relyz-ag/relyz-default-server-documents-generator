@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>relyz AG | Default Website</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="nofollow"/>
+    <link rel="stylesheet" href="../dist/main.css">
+
+    <style>
+        .form_section {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-Brand-Colors-Dark-Blue-10">
+<header class="container">
+    <img src="../assets/logo.svg" alt="relyz">
+</header>
+<main class="container">
+    <h1 class="mega-huge">Are you<br>human?</h1>
+</main>
+<footer class="container">
+    <div class="info">
+        <p class="heading-l">Wir haben ungewöhnliche Aktivitäten auf dieser Website festgestellt. Bitte bestätigen Sie, dass Sie ein Mensch sind.</p>
+        <form action="">
+            <div class="form_section">
+                <label for="verify_humanity">Verify humanity</label>
+                <input id="verify_humanity" name="verify_humanity" type="text" value="">
+
+                <label for="confirm_checkbox">Confirm</label>
+                <input id="confirm_checkbox" name="confirm" type="checkbox">
+            </div>
+            <button class="button mt-s" id="submit_btn" type="submit">Ich bin keine Maschine</button>
+        </form>
+    </div>
+    <address class="rich-text pt-m lg:pt-0">
+        <p>
+            <strong>relyz AG</strong><br>
+            Förrlibuckstrasse 190<br>
+            8005 Zürich<br>
+            <a href="&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;&#x3A;&#x68;&#x65;&#x6C;&#x70;&#x64;&#x65;&#x73;&#x6B;&#x40;&#x72;&#x65;&#x6C;&#x79;&#x7A;&#x2E;&#x63;&#x68;">&#x68;&#x65;&#x6C;&#x70;&#x64;&#x65;&#x73;&#x6B;&#x40;&#x72;&#x65;&#x6C;&#x79;&#x7A;&#x2E;&#x63;&#x68;</a><br>
+            <a href="tel:+41442568000">+41 44 256 80 00</a>
+        </p>
+    </address>
+</footer>
+<script>
+    const verifyTextInput = document.getElementById('verify_humanity')
+    const confirmCheckbox = document.getElementById('confirm_checkbox')
+    const submitButton = document.getElementById('submit_btn')
+
+    // Function to check if the cookie with the name "cookieName"
+    // exists. It does NOT check for a specific value just for the
+    // existance of the cookie
+    const cookieExists = (cookieName) => {
+        return document.cookie.indexOf(cookieName + '=') !== -1
+    }
+
+    // Name of the cookie
+    const cookieName = 'humanityCheck'
+
+    // Redirect to index page if user lands on this site by accident
+    if (cookieExists(cookieName)) {
+        window.location.reload()
+    }
+
+    submitButton.addEventListener('click', (event) => {
+        // prevent the HTML form action
+        event.preventDefault()
+
+        // Get Datetime in 2 hours for cookie expiry
+        let now = new Date();
+        now.setTime(now.getTime() + 2 * 3600 * 1000);
+
+        // If the text input and checkbox are not filled out the cookie is set
+        // and the user is redirected
+        if (verifyTextInput.value !== null && ! confirmCheckbox.checked) {
+
+            /* Cookie parametes:
+             * Name:            variable 'cookieName'
+             * Expires in:      2 hours from now
+             * Path:            /
+             * SameSite         'Strict'
+             */
+            document.cookie = cookieName + '=true; expires=' + now.toUTCString() + ';path=/;SameSite=Strict'
+
+            window.location.reload()
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "description": "Default Bundler",
+  "name": "relyz-deafult-server-documents",
+  "scripts": {
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "dev": "webpack --watch"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.4",
+    "mini-css-extract-plugin": "^2.10.0",
+    "postcss": "^8.5.8",
+    "postcss-loader": "^8.2.1",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.105.4",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "glob-import-loader": "^1.2.0",
+    "tailwindcss": "^4.1.18"
+  },
+  "imports": {
+    "#globalcss": "./src/styles/global.css"
+  }
+}

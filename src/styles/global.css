@@ -1,0 +1,572 @@
+@import "tailwindcss";
+
+@utility heading-huge {
+    font-size: 12rem;
+    font-weight: bold;
+    letter-spacing: -0.1rem;
+    line-height: 0.94;
+}
+
+@utility heading-xxxxl {
+    font-size: 8rem;
+    font-weight: bold;
+    line-height: 1;
+
+    @variant xl {
+        font-size: 10rem;
+        line-height: 0.94;
+    }
+}
+
+@utility heading-xxl {
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+@utility heading-xl {
+    font-size: 3.2rem;
+    font-weight: bold;
+    line-height: 1.05;
+
+    @variant xl {
+        line-height: 1.04;
+    }
+}
+
+@utility heading-l {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 1.1;
+
+    @variant xl {
+        font-size: 3.2rem;
+        line-height: 1.1;
+    }
+}
+
+@utility heading-m {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.04rem;
+    line-height: 1.2;
+
+    @variant xl {
+        font-size: 2.1rem;
+        line-height: 1.1;
+    }
+}
+
+@utility heading-s {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.04rem;
+    line-height: 1.4;
+
+    @variant xl {
+        font-size: 1.7rem;
+    }
+}
+
+@utility heading-xs {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.04rem;
+    line-height: 1.4;
+
+    @variant xl {
+        font-size: 1.3rem;
+    }
+}
+
+@utility intro {
+    font-size: 4.4rem;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+@utility text-m {
+    font-size: 2rem;
+    letter-spacing: 0.06rem;
+    line-height: 1.5;
+
+    @variant xl {
+        font-size: 1.7rem;
+    }
+}
+
+@utility link-m {
+    font-size: 2rem;
+    text-decoration: underline;
+    font-family: GT Standard, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.06rem;
+    line-height: 1.5;
+
+    @variant xl {
+        font-size: 1.7rem;
+    }
+}
+
+@utility text-s {
+    font-size: 1.5rem;
+    letter-spacing: 0.06rem;
+    line-height: 1.4;
+
+    @variant xl {
+        font-size: 1.7rem;
+    }
+}
+
+@utility link-s {
+    font-size: 1.7rem;
+    text-decoration: underline;
+    letter-spacing: 0.06rem;
+    line-height: 1.4;
+
+    @variant xl {
+        font-size: 1.5rem;
+    }
+}
+
+@utility text-xs {
+    font-size: 1.5rem;
+    letter-spacing: 0.06rem;
+    line-height: 1.4;
+
+    @variant xl {
+        font-size: 1.3rem;
+    }
+}
+
+@utility link-xs {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    letter-spacing: 0.04rem;
+    line-height: 1.4;
+
+    @variant xl {
+        font-size: 1.3rem;
+        letter-spacing: 0.06rem;
+    }
+}
+
+@theme {
+
+    --color-*: initial;
+
+    --color-Buttons-Primary-Default: var(--Buttons-Primary-Default);
+    --color-Buttons-Primary-Rollover: var(--Buttons-Primary-Rollover);
+    --color-Buttons-Secondary-Default: var(--Buttons-Secondary-Default);
+    --color-Buttons-Secondary-Rollover: var(--Buttons-Secondary-Rollover);
+    --color-Buttons-Tertiary-Default: var(--Buttons-Tertiary-Default);
+    --color-Buttons-Tertiary-Rollover: var(--Buttons-Tertiary-Rollover);
+    --color-Interface-Basics-Black: var(--Interface-Basics-Black);
+    --color-Interface-Basics-White: var(--Interface-Basics-White);
+    --color-Interface-Basics-Dark: var(--Interface-Basics-Dark);
+    --color-Interface-Basics-Text-Dark: var(--Interface-Basics-Text-Dark);
+    --color-Interface-Basics-Text-Medium: var(--Interface-Basics-Text-Medium);
+    --color-Interface-Basics-Text-Light: var(--Interface-Basics-Text-Light);
+    --color-Interface-Basics-Text-Extra-Light: var(--Interface-Basics-Text-Extra-Light);
+    --color-Interface-Basics-Line-Dark: var(--Interface-Basics-Line-Dark);
+    --color-Interface-Basics-Line-Medium: var(--Interface-Basics-Line-Medium);
+    --color-Interface-Basics-Line-Light: var(--Interface-Basics-Line-Light);
+    --color-Interface-Basics-Background: var(--Interface-Basics-Background);
+    --color-Interface-Basics-Error: var(--Interface-Basics-Error);
+    --color-Interface-Basics-Link: var(--Interface-Basics-Link);
+    --color-Interface-Basics-Link-Rollover: var(--Interface-Basics-Link-Rollover);
+    --color-Forms-BG-Default: var(--Forms-BG-Default);
+    --color-Forms-BG-Error: var(--Forms-BG-Error);
+    --color-Forms-Outline-Dark: var(--Forms-Outline-Dark);
+    --color-Forms-Outline-Default: var(--Forms-Outline-Default);
+    --color-Forms-Outline-Focus: var(--Forms-Outline-Focus);
+    --color-Forms-Outline-Rollover: var(--Forms-Outline-Rollover);
+    --color-Forms-Outline-Error: var(--Forms-Outline-Error);
+    --color-Forms-Placeholder-Text: var(--Forms-Placeholder-Text);
+
+    --color-Brand-Colors-Dark-Blue: var(--Brand-Colors-Dark-Blue);
+    --color-Brand-Colors-Dark-Blue-90: var(--Brand-Colors-Dark-Blue-90);
+    --color-Brand-Colors-Dark-Blue-80: var(--Brand-Colors-Dark-Blue-80);
+    --color-Brand-Colors-Dark-Blue-70: var(--Brand-Colors-Dark-Blue-70);
+    --color-Brand-Colors-Dark-Blue-60: var(--Brand-Colors-Dark-Blue-60);
+    --color-Brand-Colors-Dark-Blue-50: var(--Brand-Colors-Dark-Blue-50);
+    --color-Brand-Colors-Dark-Blue-40: var(--Brand-Colors-Dark-Blue-40);
+    --color-Brand-Colors-Dark-Blue-30: var(--Brand-Colors-Dark-Blue-30);
+    --color-Brand-Colors-Dark-Blue-20: var(--Brand-Colors-Dark-Blue-20);
+    --color-Brand-Colors-Dark-Blue-10: var(--Brand-Colors-Dark-Blue-10);
+    --color-Brand-Colors-Dark-Blue-5: var(--Brand-Colors-Dark-Blue-5);
+    --color-Brand-Colors-Rubin-Red-Dark: var(--Brand-Colors-Rubin-Red-Dark);
+    --color-Brand-Colors-Rubin-Red: var(--Brand-Colors-Rubin-Red);
+    --color-Brand-Colors-Rubin-Red-80: var(--Brand-Colors-Rubin-Red-80);
+    --color-Brand-Colors-Rubin-Red-60: var(--Brand-Colors-Rubin-Red-60);
+    --color-Brand-Colors-Rubin-Red-40: var(--Brand-Colors-Rubin-Red-40);
+    --color-Brand-Colors-Rubin-Red-20: var(--Brand-Colors-Rubin-Red-20);
+    --color-Brand-Colors-Rubin-Red-10: var(--Brand-Colors-Rubin-Red-10);
+    --color-Brand-Colors-Royal-Blue-Dark: var(--Brand-Colors-Royal-Blue-Dark);
+    --color-Brand-Colors-Royal-Blue: var(--Brand-Colors-Royal-Blue);
+    --color-Brand-Colors-Royal-Blue-80: var(--Brand-Colors-Royal-Blue-80);
+    --color-Brand-Colors-Royal-Blue-70: var(--Brand-Colors-Royal-Blue-70);
+    --color-Brand-Colors-Royal-Blue-60: var(--Brand-Colors-Royal-Blue-60);
+    --color-Brand-Colors-Royal-Blue-50: var(--Brand-Colors-Royal-Blue-50);
+    --color-Brand-Colors-Royal-Blue-40: var(--Brand-Colors-Royal-Blue-40);
+    --color-Brand-Colors-Royal-Blue-20: var(--Brand-Colors-Royal-Blue-20);
+    --color-Brand-Colors-Royal-Blue-10: var(--Brand-Colors-Royal-Blue-10);
+    --color-Brand-Colors-Sunny-Yellow-Dark: var(--Brand-Colors-Sunny-Yellow-Dark);
+    --color-Brand-Colors-Sunny-Yellow: var(--Brand-Colors-Sunny-Yellow);
+    --color-Brand-Colors-Sunny-Yellow-80: var(--Brand-Colors-Sunny-Yellow-80);
+    --color-Brand-Colors-Sunny-Yellow-60: var(--Brand-Colors-Sunny-Yellow-60);
+    --color-Brand-Colors-Sunny-Yellow-40: var(--Brand-Colors-Sunny-Yellow-40);
+    --color-Brand-Colors-Absinth-Green-Dark: var(--Brand-Colors-Absinth-Green-Dark);
+    --color-Brand-Colors-Absinth-Green: var(--Brand-Colors-Absinth-Green);
+    --color-Brand-Colors-Absinth-Green-80: var(--Brand-Colors-Absinth-Green-80);
+    --color-Brand-Colors-Absinth-Green-60: var(--Brand-Colors-Absinth-Green-60);
+    --color-Brand-Colors-Absinth-Green-40: var(--Brand-Colors-Absinth-Green-40);
+    --color-Brand-Colors-Absinth-Green-20: var(--Brand-Colors-Absinth-Green-20);
+    --color-Brand-Colors-Absinth-Green-10: var(--Brand-Colors-Absinth-Green-10);
+
+    --color-white: rgba(255, 255, 255, 1);
+    --color-black: rgba(0, 0, 0, 1);
+
+    --breakpoint-*: initial;
+    --breakpoint-sm: 375px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1400px;
+    --breakpoint-xxl: 1920px;
+
+    --text-*: initial;
+
+    --spacing-*: initial;
+
+    --spacing-0: 0;
+
+    --spacing-xxxxs: var(--SpaceXXXS);
+    --spacing-xxxs: var(--SpaceXXXS);
+    --spacing-xxs: var(--SpaceXXS);
+    --spacing-xs: var(--SpaceXS);
+    --spacing-s: var(--SpaceS);
+    --spacing-m: var(--SpaceM);
+    --spacing-l: var(--SpaceL);
+    --spacing-xl: var(--SpaceXL);
+    --spacing-xxl: var(--SpaceXXL);
+    --spacing-xxxl: var(--SpaceXXXL);
+    --spacing-xxxxl: var(--SpaceXXXXL);
+    --spacing-xxxxxl: var(--SpaceXXXXXL);
+    --spacing-xxxxxxl: var(--SpaceXXXXXXL);
+
+}
+
+@layer base {
+
+    :root, [data-theme="light"] {
+        --Brand-Colors-Dark-Blue: #051A24FF;
+        --Brand-Colors-Dark-Blue-90: #1E313AFF;
+        --Brand-Colors-Dark-Blue-80: #374850FF;
+        --Brand-Colors-Dark-Blue-70: #505F66FF;
+        --Brand-Colors-Dark-Blue-60: #69767CFF;
+        --Brand-Colors-Dark-Blue-50: #828C91FF;
+        --Brand-Colors-Dark-Blue-40: #9BA3A7FF;
+        --Brand-Colors-Dark-Blue-30: #B4BABDFF;
+        --Brand-Colors-Dark-Blue-20: #CDD1D3FF;
+        --Brand-Colors-Dark-Blue-10: #E6E8E9FF;
+        --Brand-Colors-Dark-Blue-5: #F2F4F4FF;
+        --Brand-Colors-Rubin-Red-Dark: #EB2B41FF;
+        --Brand-Colors-Rubin-Red: #FC465BFF;
+        --Brand-Colors-Rubin-Red-80: #FD6B7CFF;
+        --Brand-Colors-Rubin-Red-60: #FD909DFF;
+        --Buttons-Primary-Default: #051A24FF;
+        --Buttons-Primary-Rollover: #051A24FF;
+        --Buttons-Secondary-Default: #051A24FF;
+        --Buttons-Secondary-Rollover: #051A24FF;
+        --Buttons-Tertiary-Default: #051A2414;
+        --Buttons-Tertiary-Rollover: #051A241F;
+        --Brand-Colors-Rubin-Red-40: #FEB5BDFF;
+        --Interface-Basics-Black: #000000FF;
+        --Interface-Basics-White: #FFFFFFFF;
+        --Interface-Basics-Dark: #051A24FF;
+        --Interface-Basics-Text-Color: #051A24FF;
+        --Interface-Basics-Text-Dark: #051A24FF;
+        --Interface-Basics-Text-Medium: #051A24B2;
+        --Interface-Basics-Text-Light: #051A2499;
+        --Interface-Basics-Text-Extra-Light: #051A2473;
+        --Interface-Basics-Line-Dark: #051A2480;
+        --Interface-Basics-Line-Medium: #051A2440;
+        --Interface-Basics-Line-Light: #051A241F;
+        --Interface-Basics-Background: #F2F4F4FF;
+        --Interface-Basics-Error: #C71943FF;
+        --Interface-Basics-Link: #051A2499;
+        --Interface-Basics-Link-Rollover: #051A24FF;
+        --Forms-BG-Default: #051A240A;
+        --Forms-BG-Error: #DE001B0D;
+        --Forms-Outline-Dark: #051A24FF;
+        --Forms-Outline-Default: #1212124D;
+        --Forms-Outline-Focus: #0F242EFF;
+        --Forms-Outline-Rollover: #12121280;
+        --Forms-Outline-Error: #DE001BFF;
+        --Brand-Colors-Rubin-Red-20: #FEDADEFF;
+        --Brand-Colors-Rubin-Red-10: #FFECEFFF;
+        --Brand-Colors-Royal-Blue-Dark: #0000DDFF;
+        --Brand-Colors-Royal-Blue: #0000FFFF;
+        --Brand-Colors-Royal-Blue-80: #3333FFFF;
+        --Brand-Colors-Royal-Blue-70: #4D4DFFFF;
+        --Brand-Colors-Royal-Blue-60: #6666FFFF;
+        --Brand-Colors-Royal-Blue-50: #8080FFFF;
+        --Brand-Colors-Royal-Blue-40: #9999FFFF;
+        --Brand-Colors-Royal-Blue-20: #CCCCFFFF;
+        --Brand-Colors-Royal-Blue-10: #E5E5FFFF;
+        --Brand-Colors-Sunny-Yellow-Dark: #F1ED00FF;
+        --Brand-Colors-Sunny-Yellow: #FCFF08FF;
+        --Brand-Colors-Sunny-Yellow-80: #FCFF77FF;
+        --Brand-Colors-Sunny-Yellow-60: #FEFFC2FF;
+        --Brand-Colors-Sunny-Yellow-40: #FEFFE0FF;
+        --Brand-Colors-Absinth-Green-Dark: #8BF5C8FF;
+        --Brand-Colors-Absinth-Green: #9EFFD6FF;
+        --Brand-Colors-Absinth-Green-80: #B1FFDEFF;
+        --Brand-Colors-Absinth-Green-60: #C5FFE6FF;
+        --Brand-Colors-Absinth-Green-40: #D8FFEFFF;
+        --Brand-Colors-Absinth-Green-20: #ECFFF7FF;
+        --Brand-Colors-Absinth-Green-10: #F5FFFBFF;
+        --Forms-Placeholder-Text: #051A2466;
+
+        --grid-gutter: 1.9rem;
+
+        --SpaceXXXXS: .3rem;
+        --SpaceXXXS: .6rem;
+        --SpaceXXS: .9rem;
+        --SpaceXS: 1.2rem;
+        --SpaceS: 1.8rem;
+        --SpaceM: 2.4rem;
+        --SpaceL: 3rem;
+        --SpaceXL: 3.6rem;
+        --SpaceXXL: 4.8rem;
+        --SpaceXXXL: 6rem;
+        --SpaceXXXXL: 7.2rem;
+        --SpaceXXXXXL: 9.6rem;
+        --SpaceXXXXXXL: 12rem;
+
+        --ContentSpacingXS: 3.6rem;
+        --ContentSpacingS: 4.8rem;
+        --ContentSpacingM: 7.2rem;
+        --ContentSpacingL: 9.6rem;
+
+        --Forms__InputCorner: 0.3rem;
+        --Forms__InputHeight: 5.6rem;
+
+        --Corners__Buttons: 0.6rem;
+
+        --Corners__CardsXS: .6rem;
+        --Corners__CardsS: .9rem;
+        --Corners__CardsM: 1.2rem;
+        --Corners__CardsL: 1.8rem;
+
+        @variant xl {
+
+            --grid-gutter: 3.2rem;
+
+            --SpaceXXXXS: .4rem;
+            --SpaceXXXS: .8rem;
+            --SpaceXXS: 1.2rem;
+            --SpaceXS: 1.6rem;
+            --SpaceS: 2.4rem;
+            --SpaceM: 3.2rem;
+            --SpaceL: 4rem;
+            --SpaceXL: 4.8rem;
+            --SpaceXXL: 6.4rem;
+            --SpaceXXXL: 8rem;
+            --SpaceXXXXL: 9.6rem;
+            --SpaceXXXXXL: 12.8rem;
+            --SpaceXXXXXXL: 16rem;
+
+            --Content-Spacing-Content-Spacing-XL: 1.92rem;
+            --Content-Spacing-Content-Spacing-L: 1.28rem;
+            --Content-Spacing-Content-Spacing-M: 8.0rem;
+            --Content-Spacing-Content-Spacing-S: 4.8rem;
+
+            --Corners-Buttons: 100rem;
+            --Corners-Corner-L: 2.4rem;
+            --Corners-Corner-M: 1.6rem;
+            --Corners-Corner-S: 1.2rem;
+            --Corners-Corner-XS: 8.rem;
+
+            --Forms-Input-Corner: 8.rem;
+            --Forms-Height: 6.4rem;
+            --Forms-Height-Modern: 6.4rem;
+            --Forms-Spacing: 8.rem;
+            --Forms-Select-Size: 2.6rem;
+
+        }
+    }
+
+    *,
+    *::before,
+    *::after {
+
+        /* Cleanest modern font rendering */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        box-sizing: border-box;
+
+    }
+
+    html {
+
+        height: 100%;
+
+        /* TODO: maybe we change this to 16px and add a function to convert px to rem */
+        font-size: 2.6666666667vw;
+
+        @variant sm {
+            font-size: 10px;
+        }
+
+    }
+
+    body {
+
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        font-family: 'TWK Lausanne', Arial, sans-serif;
+
+        @apply text-m;
+
+        position: relative;
+
+        @variant lg {
+            font-size: 1.8rem;
+        }
+
+    }
+
+    .rich-text {
+
+        a {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+        }
+
+        * + * {
+            margin-top: 1em;
+        }
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .grid, [class*="\:grid"]{
+        grid-column-gap: var(--grid-gutter);
+    }
+
+    /* override default grid columns */
+    .grid:not([class*="grid-cols-"]), [class*="\:grid"]:not([class*="grid-cols"])  {
+
+        grid-template-columns: repeat(6, 1fr);
+
+        @variant md {
+            grid-template-columns: repeat(12, 1fr);
+        }
+    }
+
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        @variant md {
+            padding-left: 4.8rem;
+            padding-right: 4.8rem;
+        }
+    }
+
+    body {
+        color: var(--Interface-Basics-Text-Medium)
+    }
+
+    main {
+
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @apply my-xxxl gap-xxxxl;
+
+        > * {
+            width: 100%
+        }
+    }
+
+    address {
+        font-style: normal;
+
+        strong {
+            color: var(--Interface-Basics-Text-Dark);
+        }
+    }
+
+    footer {
+
+        .heading-l {
+            max-width: 56rem;
+        }
+
+        @variant lg {
+            display: flex;
+            justify-content: space-between;
+            gap: var(--grid-gutter);
+        }
+    }
+
+    footer,
+    header {
+        @apply py-xl;
+    }
+
+    .mega-huge {
+
+        font-size: 4.8rem;
+        font-weight: bold;
+        line-height: .95;
+        display: inline-block;
+        transform: translate3d(-0.04em, 0, 0);
+        color: var(--Interface-Basics-Text-Color);
+
+        @variant md {
+            font-size: 7.2rem;
+        }
+
+        @variant lg {
+            font-size: 12.8rem;
+        }
+
+        @variant xl {
+            font-size: 15rem;
+            max-width: 120rem;
+        }
+    }
+
+    .button {
+
+        display: inline-flex;
+        align-items: center;
+        border-radius: 100rem;
+        font-weight: bold;
+        cursor: pointer;
+
+        gap: .6rem;
+
+        box-shadow: inset 0 0 0 1px var(--Interface-Basics-Line-Dark);
+        transition: box-shadow 0.2s, color .2s;
+
+        @apply py-xs px-s;
+
+        &:hover {
+            color: var(--Interface-Basics-Text-Dark);
+            box-shadow: inset 0 0 0 2px var(--Interface-Basics-Text-Dark);
+        }
+
+    }
+}

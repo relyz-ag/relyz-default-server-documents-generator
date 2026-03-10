@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "TWK Lausanne";
+    font-weight: normal;
+    src: url("../fonts/TWKLausanne-300.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TWK Lausanne";
+    font-weight: bold;
+    src: url("../fonts/TWKLausanne-400.ttf") format("truetype");
+    font-display: swap;
+}
