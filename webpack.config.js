@@ -69,7 +69,6 @@ const config = {
     entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, '.build'),
-        clean: true,
     },
     plugins: [
         new MiniCssExtractPlugin(),
